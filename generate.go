@@ -205,6 +205,7 @@ func main() {
 	})
 
 	generateCSSBundle("ui/static/css.go", map[string][]string{
+		"qq_reader":       []string{"ui/static/css/reader.css", "ui/static/css/qq.css"},
 		"light_serif":       []string{"ui/static/css/light.css", "ui/static/css/serif.css", "ui/static/css/common.css"},
 		"light_sans_serif":  []string{"ui/static/css/light.css", "ui/static/css/sans_serif.css", "ui/static/css/common.css"},
 		"dark_serif":        []string{"ui/static/css/dark.css", "ui/static/css/serif.css", "ui/static/css/common.css"},

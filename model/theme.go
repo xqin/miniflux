@@ -9,6 +9,7 @@ import "miniflux.app/errors"
 // Themes returns the list of available themes.
 func Themes() map[string]string {
 	return map[string]string{
+		"qq_reader":       "QQ - Reader",
 		"light_serif":       "Light - Serif",
 		"light_sans_serif":  "Light - Sans Serif",
 		"dark_serif":        "Dark - Serif",
