@@ -94,12 +94,10 @@ a:hover {
 }
 
 /* Page header and footer*/
-.page-header {
-    margin-bottom: 25px;
-}
-
+.page-header,
 .page-footer {
-    margin-bottom: 10px;
+    margin-bottom: 28px;
+    position: relative;
 }
 
 .page-header h1 {
@@ -109,13 +107,24 @@ a:hover {
 
 .page-header ul,
 .page-footer ul {
-    margin-left: 25px;
+    position: absolute;
+    right: 0;
 }
 
 .page-header li,
 .page-footer li {
     list-style-type: circle;
     line-height: 1.8em;
+}
+
+.page-header li a,
+.page-footer li a{
+    text-decoration: none;
+}
+
+.page-header li a:hover,
+.page-footer li a:hover{
+    text-decoration: underline;
 }
 
 /* Logo */
@@ -209,15 +218,10 @@ a:hover {
         font-size: 1.0em;
     }
 
-    .page-header ul,
-    .page-footer ul {
-        margin-left: 0;
-    }
-
     .page-header li,
     .page-footer li {
         display: inline;
-        padding-right: 15px;
+        margin-left: 15px;
     }
 }
 
@@ -566,13 +570,13 @@ a.button {
     font-size: 1.1em;
     display: flex;
     align-items: center;
-    padding-top: 8px;
+    /*padding-top: 8px;*/
 }
 
 .pagination-bottom {
     border-top: 1px dotted var(--pagination-border-color);
     margin-bottom: 15px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .pagination > div {
@@ -603,7 +607,6 @@ a.button {
 /* List view */
 .item {
     border-bottom: var(--item-border-bottom);
-    margin-bottom: 20px;
     padding: var(--item-padding);
     overflow: hidden;
 }
@@ -627,6 +630,7 @@ a.button {
 
 .item-status-read .item-title a {
     color: var(--item-status-read-title-link-color);
+    font-weight: normal;
 }
 
 .item-meta {
@@ -694,7 +698,7 @@ article.feed-parsing-error {
 .entry header h1 {
     font-size: 2.0em;
     line-height: 1.25em;
-    margin: 5px 0 30px 0;
+    margin: 5px 0 10px 0;
 }
 
 .entry header h1 a {
@@ -708,7 +712,7 @@ article.feed-parsing-error {
 }
 
 .entry-actions {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .entry-actions a {
@@ -725,7 +729,7 @@ article.feed-parsing-error {
 
 .entry-meta {
     font-size: 0.95em;
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     color: #666;
     overflow-wrap: break-word;
 }
@@ -934,3 +938,5 @@ details.entry-enclosures {
     text-decoration: none;
     font-size: 1.2em;
 }
+
+/* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
