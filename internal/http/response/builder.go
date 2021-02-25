@@ -146,5 +146,5 @@ func (b *Builder) compress(data []byte) {
 
 // New creates a new response builder.
 func New(w http.ResponseWriter, r *http.Request) *Builder {
-	return &Builder{w: w, r: r, statusCode: http.StatusOK, headers: make(map[string]string), enableCompression: true}
+	return &Builder{w: w, r: r, statusCode: http.StatusOK, headers: make(map[string]string), enableCompression: false}
 }
