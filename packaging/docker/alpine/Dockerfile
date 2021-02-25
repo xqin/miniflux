@@ -1,8 +1,14 @@
 FROM docker.io/library/golang:alpine3.20 AS build
-RUN apk add --no-cache build-base git make
+
+#http://dl-cdn.alpinelinux.org/alpine/MIRRORS.txt
+RUN set -xe \
+    && sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
+    && apk add --no-cache build-base git make
+
 ADD . /go/src/app
 WORKDIR /go/src/app
-RUN make miniflux
+
+RUN GO111MODULE=on GOPROXY=https://goproxy.cn,https://goproxy.io,direct make miniflux
 
 FROM docker.io/library/alpine:3.20
 
@@ -16,7 +22,11 @@ LABEL org.opencontainers.image.documentation=https://miniflux.app/docs/
 
 EXPOSE 8080
 ENV LISTEN_ADDR=0.0.0.0:8080
-RUN apk --no-cache add ca-certificates tzdata
+
+RUN set -xe \
+    && sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
+    && apk --no-cache add ca-certificates tzdata
+
 COPY --from=build /go/src/app/miniflux /usr/bin/miniflux
 USER 65534
 CMD ["/usr/bin/miniflux"]
