@@ -71,6 +71,7 @@ func GetBinaryFileChecksum(filename string) (string, error) {
 // GenerateStylesheetsBundles creates CSS bundles.
 func GenerateStylesheetsBundles() error {
 	var bundles = map[string][]string{
+		"qq_reader":         {"css/reader.css", "css/common.css", "css/qq.css"},
 		"light_serif":       {"css/light.css", "css/serif.css", "css/common.css"},
 		"light_sans_serif":  {"css/light.css", "css/sans_serif.css", "css/common.css"},
 		"dark_serif":        {"css/dark.css", "css/serif.css", "css/common.css"},
