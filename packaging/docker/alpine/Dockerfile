@@ -10,7 +10,7 @@ WORKDIR /go/src/app
 
 RUN GO111MODULE=on GOPROXY=https://goproxy.cn,https://goproxy.io,direct make miniflux
 
-FROM docker.io/library/alpine:3.20
+FROM docker.io/library/alpine:3.21
 
 LABEL org.opencontainers.image.title=Miniflux
 LABEL org.opencontainers.image.description="Miniflux is a minimalist and opinionated feed reader"
