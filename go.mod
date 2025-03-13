@@ -6,18 +6,18 @@ require (
 	github.com/PuerkitoBio/goquery v1.10.0
 	github.com/abadojack/whatlanggo v1.0.1
 	github.com/andybalholm/brotli v1.1.1
-	github.com/coreos/go-oidc/v3 v3.11.0
+	github.com/coreos/go-oidc/v3 v3.13.0
 	github.com/go-webauthn/webauthn v0.11.2
 	github.com/gorilla/mux v1.8.1
 	github.com/lib/pq v1.10.9
 	github.com/prometheus/client_golang v1.20.5
 	github.com/tdewolff/minify/v2 v2.20.37
 	github.com/yuin/goldmark v1.7.8
-	golang.org/x/crypto v0.28.0
-	golang.org/x/net v0.30.0
-	golang.org/x/oauth2 v0.23.0
-	golang.org/x/term v0.25.0
-	golang.org/x/text v0.19.0
+	golang.org/x/crypto v0.36.0
+	golang.org/x/net v0.37.0
+	golang.org/x/oauth2 v0.28.0
+	golang.org/x/term v0.30.0
+	golang.org/x/text v0.23.0
 )
 
 require (
@@ -31,7 +31,7 @@ require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/fxamacker/cbor/v2 v2.7.0 // indirect
-	github.com/go-jose/go-jose/v4 v4.0.2 // indirect
+	github.com/go-jose/go-jose/v4 v4.0.5 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/klauspost/compress v1.17.9 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
@@ -41,7 +41,7 @@ require (
 	github.com/prometheus/procfs v0.15.1 // indirect
 	github.com/tdewolff/parse/v2 v2.7.15 // indirect
 	github.com/x448/float16 v0.8.4 // indirect
-	golang.org/x/sys v0.26.0 // indirect
+	golang.org/x/sys v0.31.0 // indirect
 	google.golang.org/protobuf v1.34.2 // indirect
 )
 
